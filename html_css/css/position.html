@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style>
+        html {
+            border: solid blue;
+            margin: 80px;
+        }
+
+        #container {
+            border: solid;
+            height: 400px;
+            width: 300px;
+            margin-left: 150px;
+            position: relative;
+        }
+
+        #div1,
+        #div2,
+        #div3 {
+            border: solid red;
+
+            width: 200px;
+            height: 100px;
+        }
+
+        #div1 {
+            /*    by default   */
+            /*      position: static;*/
+
+            /*      relative to its original position */
+            position: relative;
+            right: 100px;
+
+        }
+
+        #div2 {
+            /*      absolute want to find a non-static container */
+            /*      if not found, relative to viewport*/
+            /*      if found, relative to its closest non-static container */
+            position: absolute;
+            right: 50px;
+            border: solid 6px
+        }
+
+        #div3 {
+            border: solid blue 5px;
+            /*            fixed element relative to viewport*/
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--  #container>#div1-->
+    <div id="container">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
+
+</body></html>
+
